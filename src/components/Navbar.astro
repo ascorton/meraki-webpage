@@ -1,0 +1,45 @@
+---
+const navLinks = [
+  { name: "Quienes somos", href: "quienes-somos" },
+  { name: "El equipo", href: "#seccion-2" },
+  { name: "Servicios", href: "#seccion-3" },
+  { name: "Contacto", href: "#seccion-4" },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-orange-100/60 shadow-sm">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    
+    <a href="/" class="flex items-center gap-3">
+      <div class="flex flex-col">
+        <span class="text-xl font-bold text-stone-800 tracking-tight leading-tight">
+          MERAKI
+        </span>
+        <span class="text-s font-medium text-amber-600 tracking-wider">
+          Fisioterapia y Movimiento
+        </span>
+      </div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class="text-sm font-medium text-stone-600 hover:text-amber-600 transition-colors"
+        >
+          {link.name}
+        </a>
+      ))}
+    </div>
+
+    <div class="flex items-center gap-4">
+      <a 
+        href="#contacto" 
+        class="bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm transition-all hover:shadow-amber-600/20"
+      >
+        Pedir Cita
+      </a>
+    </div>
+
+  </nav>
+</header>

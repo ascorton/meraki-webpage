@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout 
+  title="Quiénes Somos | MERAKI Fisioterapia y Movimiento" 
+  description="Conoce al equipo de especialistas de MERAKI Fisioterapia. Nuestra filosofía y compromiso con tu recuperación y bienestar."
+>
+  <!-- Navbar presente en todas las páginas -->
+  <Navbar />
+
+  <main class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Cabecera de la sección -->
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <span class="inline-block bg-orange-100/80 text-amber-800 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+          Sobre Nosotros
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">
+          Entendemos la salud como un proceso <span class="text-amber-600">cercano y activo</span>
+        </h1>
+        <p class="text-lg text-stone-600">
+          En MERAKI combinamos la evidencia científica con una atención plenamente humana y personalizada para ayudarte a recuperar el movimiento sin dolor.
+        </p>
+      </div>
+
+      <!-- Contenido en dos columnas (Historia / Filosofía o Equipo) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <!-- Imagen representativa -->
+        <div class="relative flex justify-center">
+          <div class="w-full h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl border border-amber-200/60 bg-amber-50 flex items-center justify-center">
+            <!-- Puedes cambiar esta imagen por otra de la clínica o equipo -->
+            <img 
+              src="/images/flowers_entrance.jpg" 
+              alt="Equipo de MERAKI Fisioterapia" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Texto descriptivo -->
+        <div class="space-y-6 text-stone-700">
+          <h2 class="text-2xl sm:text-3xl font-bold text-stone-900">
+            ¿Por qué elegir MERAKI?
+          </h2>
+          <p>
+            Creemos que cada paciente es único. No tratamos simplemente síntomas aislados; analizamos el origen de la molestia para diseñar un plan de recuperación hecho a tu medida.
+          </p>
+          <p>
+            Nuestro espacio está diseñado específicamente para transmitir calma, utilizando materiales cálidos, madera y luz natural que facilitan la desconexión y el proceso de sanación desde el primer momento en que cruzas la puerta.
+          </p>
+          <div class="pt-2">
+            <a 
+              href="/#contacto" 
+              class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all"
+            >
+              Reserva tu valoración
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>
