@@ -1,0 +1,79 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-stone-900 text-stone-300 border-t border-amber-900/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Columna 1: Marca y descripción -->
+      <div class="space-y-4">
+        <a href="/" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+          <span class="text-amber-500">MERAKI</span> Fisioterapia
+        </a>
+        <p class="text-sm text-stone-400 leading-relaxed">
+          Centro de fisioterapia y movimiento en Getafe. Cuidamos de tu salud con un enfoque clínico avanzado, humano y personalizado.
+        </p>
+      </div>
+
+      <!-- Columna 2: Enlaces rápidos -->
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Navegación</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li>
+            <a href="/" class="hover:text-amber-400 transition-colors">Inicio</a>
+          </li>
+          <li>
+            <a href="/quienes-somos" class="hover:text-amber-400 transition-colors">Quiénes Somos</a>
+          </li>
+          <li>
+            <a href="/equipo" class="hover:text-amber-400 transition-colors">Equipo</a>
+          </li>
+          <li>
+            <a href="/servicios" class="hover:text-amber-400 transition-colors">Servicios</a>
+          </li>
+          <li>
+            <a href="/contacto" class="hover:text-amber-400 transition-colors">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Horarios resumidos -->
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Horarios</h3>
+        <div class="text-sm space-y-1 text-stone-400">
+          <p class="font-medium text-stone-300">Lunes a Viernes:</p>
+          <p>08:00 - 20:30</p>
+          <p class="font-medium text-stone-300 pt-2">Sábados y Domingos:</p>
+          <p>Cerrado</p>
+        </div>
+      </div>
+
+      <!-- Columna 4: Contacto rápido -->
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Encuéntranos</h3>
+        <div class="text-sm space-y-2 text-stone-400">
+          <p>Avenida Martín Gato, 1, Local Bajo</p>
+          <p>28903 Getafe, Madrid</p>
+          <p class="pt-1">
+            <a href="tel:+34600000000" class="hover:text-amber-400 transition-colors font-medium text-stone-300">
+              +34 600 00 00 00
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Línea divisoria y Copyright -->
+    <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+      <p>&copy; {currentYear} MERAKI Fisioterapia y Movimiento. Todos los derechos reservados.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-stone-400 transition-colors">Política de Privacidad</a>
+        <a href="#" class="hover:text-stone-400 transition-colors">Aviso Legal</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
