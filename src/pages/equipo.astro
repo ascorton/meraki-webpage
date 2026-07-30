@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+const equipo = [
+  {
+    nombre: "Ana Moreno",
+    titulacion: "Doctora en fisioterapia y la puta ama",
+    descripcion: "Se perdió su carta de Hogwarts asi que se matriculó en la URJC, pero Gryffindor siempre. Echa más horas que un reloj de pared. No se si ya comentamos que es DOCTORA",
+    foto: "/images/ana.jpg",
+  },
+  {
+    nombre: "David Yoquese",
+    titulacion: "Fisioterapeuta deportivo y pitukito",
+    descripcion: "Especializado en el tratamiento de lesiones en deportistas y ecografía musculoesquelética. Enfocado en devolver la funcionalidad completa mediante ejercicio activo.",
+    foto: "/images/david.jpg",
+  },
+  {
+    nombre: "Begoña",
+    titulacion: "Experta en carrilleras",
+    descripcion: "Dadora de vida, administradora, recepcionista y chef amateur. Dicen que en el cumpleaños de su hija, hizo el menú para el yerno.",
+    foto: "/images/madre.png",
+  },
+  {
+    nombre: "La rubia que entrena",
+    titulacion: "Entrenadora personal",
+    descripcion: "Dedicada al cuidado de los más pequeños, facilitando el desarrollo motor y mejorando su calidad de vida a través de técnicas especializadas.",
+    foto: "/images/entrenadora.png",
+  },
+  {
+    nombre: "Desiree",
+    titulacion: "Fisioterapeuta y especialista en suelo pélvico",
+    descripcion: "Convencida de que el movimiento es la mejor medicina. Guía sesiones orientadas a la corrección postural y el fortalecimiento.",
+    foto: "/images/flowers_entrance.jpg",
+  },
+  {
+    nombre: "Barbara Rodriguez",
+    titulacion: "Nutricionista",
+    descripcion: "Nutricionista colegiada y coach certificada de crossfit. Más fuerte que un pistacho cerrao'.",
+    foto: "/images/barbara.jpg",
+  },
+  {
+    nombre: "La dupla galáctica, EL BINOMIO",
+    titulacion: "Ingeniosos más que ingenieros",
+    descripcion: "Frikis y a mucha honra. No son ricos porque les gusta demasiado el fornite. Exterminadores de niños rata",
+    foto: "/images/binomio.jpeg",
+  }
+];
+---
+
+<Layout 
+  title="Nuestro Equipo | MERAKI Fisioterapia y Movimiento" 
+  description="Conoce al equipo de especialistas de MERAKI Fisioterapia. Profesionales colegiados y comprometidos con tu recuperación."
+>
+  <Navbar />
+
+  <main class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Cabecera -->
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-20">
+        <span class="inline-block bg-orange-100/80 text-amber-800 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+          El Equipo
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">
+          Profesionales apasionados por <span class="text-amber-600">tu bienestar</span>
+        </h1>
+        <p class="text-lg text-stone-600">
+          Un equipo cercano, colegiado y en constante formación para ofrecerte una atención clínica excelente.
+        </p>
+      </div>
+
+      <!-- Listado en zigzag -->
+      <div class="space-y-16 lg:space-y-24">
+        {equipo.map((miembro, index) => (
+          <div class={`grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+            
+            <div class={`relative flex justify-center ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                <div class="w-full max-w-sm mx-auto aspect-3-4 rounded-3xl overflow-hidden shadow-xl border border-amber-200/60 bg-amber-50">
+                    <img 
+                        src={miembro.foto} 
+                        alt={miembro.nombre} 
+                        class="w-full h-full object-cover object-top"
+                    />
+                </div>
+            </div>
+
+            <div class={`space-y-4 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+              <span class="text-amber-600 font-semibold text-sm uppercase tracking-wider">
+                Especialista
+              </span>
+              <h2 class="text-3xl font-bold text-stone-900">
+                {miembro.nombre}
+              </h2>
+              <p class="text-amber-800 font-medium text-base bg-amber-50/80 border border-amber-200/60 px-4 py-2 rounded-xl inline-block">
+                {miembro.titulacion}
+              </p>
+              <p class="text-stone-600 text-base leading-relaxed pt-2">
+                {miembro.descripcion}
+              </p>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </main>
+</Layout>
