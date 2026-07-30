@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout 
+  title="Contacto y Ubicación | MERAKI Fisioterapia y Movimiento" 
+  description="Ponte en contacto con nosotros o visítanos en nuestra clínica de fisioterapia. Encuentra nuestro teléfono, correo, horarios y mapa de ubicación."
+>
+  <Navbar />
+
+  <main class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Cabecera -->
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <span class="inline-block bg-orange-100/80 text-amber-800 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+          Estamos para ayudarte
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">
+          Ponte en <span class="text-amber-600">contacto</span>
+        </h1>
+        <p class="text-lg text-stone-600">
+          Llámanos, escríbenos o visítanos directamente en la clínica para resolver cualquier duda o reservar tu cita.
+        </p>
+      </div>
+
+      <!-- Grid principal: Datos de contacto y Horarios a la izquierda, Mapa a la derecha (o distribución en columna doble) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-20">
+        
+        <!-- Columna 1: Teléfonos, Correo y Horarios -->
+        <div class="space-y-8">
+          
+          <!-- Bloque 1: Vías de contacto directas -->
+          <div class="bg-amber-50/60 border border-amber-200/60 rounded-3xl p-8 space-y-6 shadow-sm">
+            <h2 class="text-2xl font-bold text-stone-900">
+              Información de contacto
+            </h2>
+            
+            <ul class="space-y-4 text-stone-700">
+              <!-- Móvil -->
+              <li>
+                <a href="tel:+34600000000" class="flex items-center gap-4 group">
+                  <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center shadow-md group-hover:bg-amber-700 transition-colors shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Móvil / WhatsApp</p>
+                    <p class="text-lg font-bold text-stone-900 group-hover:text-amber-600 transition-colors">+34 600 00 00 00</p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- Fijo -->
+              <li>
+                <a href="tel:+34910000000" class="flex items-center gap-4 group">
+                  <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center shadow-md group-hover:bg-amber-700 transition-colors shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Teléfono Fijo</p>
+                    <p class="text-lg font-bold text-stone-900 group-hover:text-amber-600 transition-colors">+34 910 00 00 00</p>
+                  </div>
+                </a>
+              </li>
+
+              <!-- Correo -->
+              <li>
+                <a href="mailto:info@merakifisioterapia.com" class="flex items-center gap-4 group">
+                  <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center shadow-md group-hover:bg-amber-700 transition-colors shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-xs font-semibold text-amber-800 uppercase tracking-wider">Correo Electrónico</p>
+                    <p class="text-lg font-bold text-stone-900 group-hover:text-amber-600 transition-colors">info@merakifisioterapia.com</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Bloque 2: Horario de la clínica -->
+          <div class="bg-amber-50/60 border border-amber-200/60 rounded-3xl p-8 space-y-4 shadow-sm">
+            <h2 class="text-2xl font-bold text-stone-900 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Horario General
+            </h2>
+            <div class="space-y-2 text-stone-700">
+              <div class="flex justify-between border-b border-amber-200/40 pb-2">
+                <span class="font-medium text-stone-800">Lunes a Viernes</span>
+                <span class="text-stone-600">09:30 - 14:30 y 16:30 - 21:00</span>
+              </div>
+              <div class="flex justify-between pt-1">
+                <span class="font-medium text-stone-800">Sábados y Domingos</span>
+                <span class="text-amber-700 font-medium">Cerrado</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna 2: Dirección y Mapa Interactivo -->
+        <div class="space-y-6">
+          <div class="bg-amber-50/60 border border-amber-200/60 rounded-3xl p-8 space-y-6 shadow-sm">
+            
+            <div class="space-y-2">
+              <h2 class="text-2xl font-bold text-stone-900 flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Ubicación
+              </h2>
+              <p class="text-stone-600">
+                Avenida Martín Gato, 1, Local Bajo<br />
+                28903 Getafe, Madrid
+              </p>
+            </div>
+
+            <!-- Mapa interactivo integrado para Getafe -->
+            <div class="w-full h-80 rounded-2xl overflow-hidden shadow-inner border border-amber-200/60 relative">
+              <iframe 
+                src="https://maps.google.com/maps?q=Avenida+Martín+Gato+1,+28903+Getafe,+Madrid&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de MERAKI Fisioterapia en Getafe"
+              ></iframe>
+            </div>
+
+            <!-- Enlace directo para abrir en la app de Google Maps con la dirección exacta -->
+            <div>
+              <a 
+                href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=/maps/place//data%3D!4m2!3m1!1s0xd42210e1ca7089f:0x2929be3a6af1fbf%3Fsa%3DX%26ved%3D1t:8290%26ictx%3D111&ved=2ahUKEwjvwayUsvuVAxUHRqQEHbwsFXUQ4kB6BAghEAM&usg=AOvVaw2HUzcBm2eZhZhZQizzKFVg" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full block text-center bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition-all text-sm"
+              >
+                Abrir en Google Maps
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</Layout>
