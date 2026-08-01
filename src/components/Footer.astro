@@ -68,12 +68,55 @@ const currentYear = new Date().getFullYear();
 
     <!-- Línea divisoria y Copyright -->
     <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
-      <p>&copy; {currentYear} MERAKI Fisioterapia y Movimiento. Todos los derechos reservados.</p>
+      <p id="easter-egg-trigger" class="select-none">
+        &copy; {currentYear} MERAKI Fisioterapia y Movimiento. Todos los derechos reservados.</p>
       <div class="flex gap-6">
         <a href="#" class="hover:text-stone-400 transition-colors">Política de Privacidad</a>
         <a href="#" class="hover:text-stone-400 transition-colors">Aviso Legal</a>
       </div>
     </div>
+
+    <!-- Modal oculto inicialmente -->
+    <div id="easter-egg-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="bg-stone-900 border border-amber-500/40 p-8 rounded-3xl max-w-md text-center space-y-4 shadow-2xl relative text-stone-200">
+            <div class="w-16 h-16 bg-amber-600/20 text-amber-500 rounded-2xl flex items-center justify-center mx-auto text-2xl font-bold">
+                M
+            </div>
+            <h3 class="text-2xl font-bold text-white">¡Easter Egg Desbloqueado!</h3>
+            <p class="text-stone-400 text-sm">
+                Esta web fue diseñada y desarrollada con código milimétrico por <strong class="text-amber-400">Tu Nombre o tu Marca</strong>.
+            </p>
+            <button id="close-modal" class="mt-4 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-2 rounded-xl transition-all text-sm">
+            Cerrar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let clicks = 0;
+        const trigger = document.getElementById('easter-egg-trigger');
+        const modal = document.getElementById('easter-egg-modal');
+        const closeBtn = document.getElementById('close-modal');
+
+        trigger?.addEventListener('click', () => {
+            clicks++;
+            if (clicks === 7) {
+                modal?.classList.remove('hidden');
+                clicks = 0; // Reinicia el contador
+            }
+        });
+
+        closeBtn?.addEventListener('click', () => {
+            modal?.classList.add('hidden');
+        });
+
+        // Cierra también si hacen clic fuera de la ventana modal
+        modal?.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    </script>
 
   </div>
 </footer>
